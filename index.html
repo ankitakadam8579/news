@@ -1,13 +1,11 @@
 <html>
   <body>
+    <button onclick="getNews()">Generate news</button>
     <div id="result"></div>
     <script>
       const API_KEY =
         "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";
 
-        setInterval(() => {
-            getNews();
-        }, 2000);
 
       async function getNews() {
         const response = await fetch(
@@ -37,5 +35,5 @@
         document.getElementById('result').appendChild(newDiv);
       }
     </script>
-  </body>
+  </body>
 </html>
